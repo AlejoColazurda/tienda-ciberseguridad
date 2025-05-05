@@ -23,6 +23,8 @@
 | GitHub Pages      | Markdown           |
 ------------------------------------------
 
+Traté de sumar algo que hace mucho no veo, y es la firma del Dev/Coder. Traté de poner un char art pero no logré que quede como buscaba **quizás la proxima si funcione**
+
 👨💻 Autor
 Alejo Colazurda
 Estudiante de Desarrollo Full Stack en CoderHouse
