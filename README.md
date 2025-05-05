@@ -4,7 +4,7 @@
 
 **Proyecto académico** desarrollado para la carrera de *Desarrollo Full Stack Web Development* en [CoderHouse](https://www.coderhouse.com/).  
 📍 Módulo: Desarrollo Web / Frontend  
-🔥 Proyecto E-commerce básico con enfoque en soluciones de ciberseguridad para pequeñas y medianas empresas.
+🔥 Proyecto "E-commerce" básico con enfoque en soluciones de ciberseguridad para pequeñas y medianas empresas.
 
 ## ✨ Características principales
 - ✅ Catálogo de productos esenciales en formato masonry grid
