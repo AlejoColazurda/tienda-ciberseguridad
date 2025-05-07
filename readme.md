@@ -1,21 +1,36 @@
-# 🛡️ MiTienda Ciber - Soluciones de Ciberseguridad para PyMEs
+# 🛡️ MiTienda Ciber - Tienda de Ciberseguridad para PyMEs
 
-![Captura de pantalla de la tienda](/img/screenshot.png)
+**Pronto Tendré una Demo!**
 
-Sitio web educativo creado para el curso de [nombre del curso], demostrando habilidades en desarrollo web frontend y conciencia en ciberseguridad.
+**Proyecto académico** desarrollado para la carrera de *Desarrollo Full Stack Web Development* en [CoderHouse](https://www.coderhouse.com/).  
+📍 Módulo: Desarrollo Web / Frontend  
+🔥 Proyecto "E-commerce" básico con enfoque en soluciones de ciberseguridad para pequeñas y medianas empresas.
 
-## 🚀 Características principales
-- Catálogo de productos esenciales de ciberseguridad
-- Diseño responsive con masonry grid
-- Sección de seguimiento de desarrollo ("Hype")
-- Integración con SweetAlert2 para notificaciones
-- Formulario de contacto funcional
+## ✨ Características principales
+- ✅ Catálogo de productos esenciales en formato masonry grid
+- ✅ Navbar sticky y footer fijo en todas las páginas
+- ✅ Diseño 100% responsive (Mobile First)
+- ✅ Sistema de notificaciones con SweetAlert2
+- ✅ Página de seguimiento de desarrollo ("Hype Dashboard")
+- ✅ Formulario de contacto integrado con LinkedIn
 
-## 🛠 Tecnologías utilizadas
-- HTML5 semántico
-- CSS3 (Variables custom, Grid, Flexbox)
-- Font Awesome (iconos)
-- SweetAlert2 (popups)
-- GitHub Pages (hosting)
+## 🛠 Stack tecnológico
+| Frontend          | Herramientas       |
+|-------------------|--------------------|
+| HTML5 Semántico   | Git + GitHub       |
+| CSS3 (Grid/Flex)  | Font Awesome Icons |
+| JavaScript Básico | SweetAlert2        |
+| GitHub Pages      | Markdown           |
+------------------------------------------
 
-## 📂 Estructura de archivos
+Traté de sumar algo que hace mucho no veo, y es la firma del Dev/Coder. Traté de poner un char art pero no logré que quede como buscaba **quizás la proxima si funcione**
+
+👨💻 Autor
+Alejo Colazurda
+Estudiante de Desarrollo Full Stack en CoderHouse
+
+Descuentito por leer y llegar hasta acá:
+
+ref.alejo.ed0a
+
+El código de arriba te dá un 15% de descuento para cualquier Curso o Carrera y es Acumulable con otros beneficios.

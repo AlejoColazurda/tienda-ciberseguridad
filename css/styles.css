@@ -131,6 +131,7 @@
   .gallery.masonry {
     column-gap: var(--gap);
     padding: var(--gap) 0;
+    display: flow-root;
   }
   .gallery.masonry .item {
     background: var(--light-bg);
