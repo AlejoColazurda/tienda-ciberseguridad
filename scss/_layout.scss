@@ -1,0 +1,16 @@
+@import 'variables';
+@import 'mixins';
+
+// Mixin para generar grids de N columnas
+@mixin grid($cols, $gap: $gap) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  gap: $gap;
+}
+
+// Clase utilitaria para centrar con flex
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

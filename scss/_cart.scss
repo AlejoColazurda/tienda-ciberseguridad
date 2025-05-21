@@ -1,0 +1,42 @@
+@import 'variables';
+@import 'mixins';
+
+.cart-page {
+  padding: $gap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.error-container {
+  background: $white;
+  padding: $gap * 2;
+  border: 2px solid $violet;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: 0 auto;
+
+  h2 {
+    color: $violet;
+    margin-bottom: $gap;
+  }
+
+  .btn-back {
+    display: inline-block;
+    margin-top: $gap;
+    padding: 0.5rem 1rem;
+    border: 2px solid $violet;
+    border-radius: 4px;
+    color: $violet;
+    text-decoration: none;
+    @include transition(background, color);
+
+    &:hover {
+      background: $violet;
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import 'variables';
+@import 'mixins';
+
+.contact-section {
+  padding: 3rem 0;
+  background: $light-bg;
+  text-align: center;
+  clear: both;
+  margin-top: $gap;
+  break-inside: avoid;
+
+  h3 {
+    color: $violet;
+    margin-bottom: 1.5rem;
+  }
+
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    gap: $gap;
+
+    @include respond(sm) {
+      flex-direction: column;
+    }
+
+    input {
+      flex: 1;
+      padding: 0.8rem;
+      border: 2px solid $violet;
+      border-radius: 4px;
+    }
+
+    button {
+      background: $violet;
+      color: $white;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 4px;
+      cursor: pointer;
+      @include transition(opacity);
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}

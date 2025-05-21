@@ -1,0 +1,68 @@
+@import 'variables';
+@import 'mixins';
+
+.about {
+  padding: $gap * 3 0;
+  background: linear-gradient(135deg, #fafafa 0%, #f4e4fe 100%);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin: $gap 0;
+
+  h2 {
+    position: relative;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: $gap;
+
+    &::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: $violet;
+      position: absolute;
+      bottom: -0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: $gap * 1.5;
+  }
+
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: $gap;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      background: $white;
+      padding: $gap;
+      border-radius: 6px;
+      @include transition(transform, box-shadow);
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+
+      i {
+        color: $violet;
+        font-size: 1.5rem;
+      }
+
+      strong {
+        display: block;
+        font-size: 1rem;
+      }
+    }
+  }
+}

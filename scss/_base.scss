@@ -1,0 +1,25 @@
+@import 'variables';
+@import 'mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: sans-serif;
+  color: $text;
+  background: $white;
+  line-height: 1.5;
+}
+main { flex: 1; }
+.container {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}

@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "sass": "^1.89.0"
+  },
+  "scripts": {
+    "build:css": "sass scss/main.scss css/styles.css --style=compressed",
+    "watch:css": "sass --watch scss/main.scss css/styles.css --style=compressed"
+  }
+}

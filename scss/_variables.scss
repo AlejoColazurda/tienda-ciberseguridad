@@ -1,0 +1,20 @@
+// Colores
+$violet: #6a0dad;
+$white: #fff;
+$text: #333;
+$light-bg: #fafafa;
+
+// Tonos de footer
+$footer-bg:     #4b0082 !default; 
+$footer-text:   #f1f1f1 !default;  
+
+// Espaciados y transiciones
+$gap: 1rem;
+$transition: 0.3s ease-in-out;
+
+// Breakpoints
+$breakpoints: (
+  sm: 500px,
+  md: 768px,
+  lg: 900px
+);

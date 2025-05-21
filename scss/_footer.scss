@@ -1,0 +1,16 @@
+@import 'variables';
+
+.site-footer {
+  background: $violet;
+  color: $white;
+  padding: ($gap * 2) 0;
+  margin-top: auto;
+
+  .container { display: flex; justify-content: center; }
+  .social-links {
+    list-style: none;
+    display: flex;
+    gap: ($gap * 1.5);
+    a { @include transition(opacity); &:hover { opacity: 0.8; } }
+  }
+}

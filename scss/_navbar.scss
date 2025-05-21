@@ -1,0 +1,56 @@
+@import 'variables';
+@import 'mixins';
+@use 'sass:color';
+
+.navbar {
+  background: $violet;
+  color: $white;
+
+  .nav-links {
+    display: flex;
+    gap: $gap;
+
+    a {
+      position: relative;
+      color: $white;
+      text-decoration: none;
+      padding: 0.5rem 0;
+      @include transition(color);
+
+      &:hover {
+        color: color.adjust($white, $lightness: 10%);
+      }
+
+      &.active {
+        font-weight: bold;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          background: $white;
+        }
+      }
+    }
+
+    .cart-button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  @include respond(md) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+
+      &.open {
+        display: flex;
+      }
+    }
+  }
+}
