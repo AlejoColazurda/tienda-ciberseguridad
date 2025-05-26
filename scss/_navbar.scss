@@ -1,55 +1,96 @@
-@import 'variables';
-@import 'mixins';
+@use 'variables';
+@use 'mixins';
 @use 'sass:color';
 
 .navbar {
-  background: $violet;
-  color: $white;
+  background-color: variables.$light-bg;
+  padding: calc(variables.$gap / 2) 0;
+  border-bottom: 1px solid darken(variables.$light-bg, 10%);
 
-  .nav-links {
+  > .container { // Para el .container directo dentro de .navbar
     display: flex;
-    gap: $gap;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    a {
-      position: relative;
-      color: $white;
-      text-decoration: none;
-      padding: 0.5rem 0;
-      @include transition(color);
-
-      &:hover {
-        color: color.adjust($white, $lightness: 10%);
-      }
-
-      &.active {
-        font-weight: bold;
-
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: -4px;
-          left: 0;
-          width: 100%;
-          height: 3px;
-          background: $white;
-        }
-      }
-    }
-
-    .cart-button {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+  .logo { // Clase de tu HTML
+    display: inline-block;
+    img {
+      height: 40px; // Ajusta este tamaño según necesites
+      width: auto;
+      display: block;
     }
   }
 
-  @include respond(md) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
+  .nav-links { // Clase de tu HTML
+    display: flex;
+    align-items: center;
 
-      &.open {
+    a {
+      text-decoration: none;
+      color: variables.$text-color;
+      padding: calc(variables.$gap / 2) variables.$gap;
+      margin-left: calc(variables.$gap / 2);
+      border-radius: 4px;
+      @include mixins.transition(background-color, color);
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:hover {
+        color: variables.$violet;
+        background-color: rgba(variables.$violet, 0.05);
+      }
+    }
+  }
+
+  .nav-toggle { // Clase de tu HTML
+    display: none; // Se muestra en móvil
+    background: transparent;
+    border: none;
+    color: variables.$text-color;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: calc(variables.$gap / 2);
+    z-index: 1001;
+  }
+
+  // Estilos para Móvil
+  @include mixins.respond('md') { // Usando breakpoint 'md' de _variables.scss
+    .nav-toggle {
+      display: block;
+    }
+
+    .nav-links {
+      display: none; // Oculto por defecto en móvil
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: variables.$light-bg;
+      box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+      padding: variables.$gap 0;
+
+      &.open { // Clase que añade JavaScript
         display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        a {
+          margin-left: 0;
+          margin-bottom: variables.$gap;
+          padding: variables.$gap;
+          width: 90%;
+          text-align: center;
+          border-bottom: 1px solid rgba(variables.$text-color, 0.1);
+
+          &:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+          }
+        }
       }
     }
   }

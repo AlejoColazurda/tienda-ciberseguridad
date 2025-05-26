@@ -1,16 +1,16 @@
-@import 'variables';
-@import 'mixins';
+@use 'variables';
+@use 'mixins';
 
 .contact-section {
   padding: 3rem 0;
-  background: $light-bg;
+  background: variables.$light-bg;
   text-align: center;
+  break-inside: avoid-column;
   clear: both;
-  margin-top: $gap;
-  break-inside: avoid;
+  margin-top: variables.$gap;
 
   h3 {
-    color: $violet;
+    color: variables.$violet;
     margin-bottom: 1.5rem;
   }
 
@@ -18,27 +18,27 @@
     max-width: 500px;
     margin: 0 auto;
     display: flex;
-    gap: $gap;
+    gap: variables.$gap;
 
-    @include respond(sm) {
+    @include mixins.respond('sm') {
       flex-direction: column;
     }
 
     input {
       flex: 1;
       padding: 0.8rem;
-      border: 2px solid $violet;
+      border: 2px solid variables.$violet;
       border-radius: 4px;
     }
 
     button {
-      background: $violet;
-      color: $white;
+      background: variables.$violet;
+      color: variables.$white;
       border: none;
       padding: 0.8rem 2rem;
       border-radius: 4px;
       cursor: pointer;
-      @include transition(opacity);
+      @include mixins.transition(opacity);
 
       &:hover {
         opacity: 0.9;

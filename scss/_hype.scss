@@ -1,43 +1,43 @@
-@import 'variables';
-@import 'mixins';
+@use 'variables';
+@use 'mixins';
 
 .hype {
-  padding: $gap * 2 0;
-  background: $light-bg;
+  padding: variables.$gap * 2 0;
+  background: variables.$light-bg;
 
   h2 {
-    color: $violet;
+    color: variables.$violet;
     text-align: center;
-    margin-bottom: $gap;
+    margin-bottom: variables.$gap;
   }
 
   p {
     max-width: 800px;
-    margin: 0 auto $gap * 2;
+    margin: 0 auto variables.$gap * 2;
     text-align: center;
     line-height: 1.6;
   }
 
   .dashboard-grid {
     display: grid;
-    gap: $gap;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    margin: $gap 0;
+    gap: variables.$gap;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: variables.$gap 0;
 
     .dash-card {
-      background: $white;
-      padding: $gap;
+      background: variables.$white;
+      padding: variables.$gap;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       text-align: center;
-      @include transition(transform);
+      @include mixins.transition(transform);
 
       &:hover {
         transform: translateY(-5px);
       }
 
       h3 {
-        color: $violet;
+        color: variables.$violet;
         margin-bottom: 0.5rem;
       }
     }

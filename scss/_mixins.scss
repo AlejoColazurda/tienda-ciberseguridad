@@ -1,16 +1,14 @@
 @use 'sass:map';
+@use 'sass:list';
+@use 'variables';
 
-@import 'variables';
-
-// Mixin para media queries responsivas usando map.get
 @mixin respond($break) {
-  @media (max-width: map.get($breakpoints, $break)) {
+  @media (max-width: map.get(variables.$breakpoints, $break)) {
     @content;
   }
 }
 
-// Mixin para transiciones en una o varias propiedades
 @mixin transition($properties...) {
-  $prop-list: join($properties, ', ');
-  transition: #{$prop-list} $transition;
+  $prop-list: list.join($properties, ', ');
+  transition: #{$prop-list} variables.$transition;
 }

@@ -1,19 +1,20 @@
-@import 'variables';
+@use 'variables';
+@use 'mixins';
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: $gap;
-  padding: $gap 0;
+  gap: variables.$gap;
+  padding: variables.$gap 0;
 
   .item {
-    background: $light-bg;
+    background: variables.$light-bg;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    @include transition(transform, box-shadow);
+    @include mixins.transition(transform, box-shadow);
 
     &:hover {
       transform: translateY(-4px);
@@ -27,8 +28,8 @@
     }
 
     .caption {
-      background: rgba(106,13,173,0.1);
-      color: $violet;
+      background: rgba(106, 13, 173, 0.1);
+      color: variables.$violet;
       padding: 0.5rem;
       text-align: center;
       font-weight: bold;

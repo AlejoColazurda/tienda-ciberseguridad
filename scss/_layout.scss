@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'mixins';
+@use 'variables';
+@use 'mixins';
 
 // Mixin para generar grids de N columnas
 @mixin grid($cols, $gap: $gap) {

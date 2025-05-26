@@ -1,8 +1,8 @@
-@import 'variables';
-@import 'mixins';
+@use 'variables';
+@use 'mixins';
 
 .cart-page {
-  padding: $gap;
+  padding: variables.$gap;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,33 +10,33 @@
 }
 
 .error-container {
-  background: $white;
-  padding: $gap * 2;
-  border: 2px solid $violet;
+  background: variables.$white;
+  padding: variables.$gap * 2;
+  border: 2px solid variables.$violet;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   max-width: 500px;
   margin: 0 auto;
 
   h2 {
-    color: $violet;
-    margin-bottom: $gap;
+    color: variables.$violet;
+    margin-bottom: variables.$gap;
   }
 
   .btn-back {
     display: inline-block;
-    margin-top: $gap;
+    margin-top: variables.$gap;
     padding: 0.5rem 1rem;
-    border: 2px solid $violet;
+    border: 2px solid variables.$violet;
     border-radius: 4px;
-    color: $violet;
+    color: variables.$violet;
     text-decoration: none;
-    @include transition(background, color);
+    @include mixins.transition(background, color);
 
     &:hover {
-      background: $violet;
-      color: $white;
+      background: variables.$violet;
+      color: variables.$white;
     }
   }
 }
